@@ -1,7 +1,5 @@
 extern crate image;
 
-use image::imageops::dither;
-use image::imageops::BiLevel;
 use std::env;
 use std::path::PathBuf;
 
