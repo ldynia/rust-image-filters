@@ -23,3 +23,7 @@ cargo run assets/img/rainbow.jpg
 rustc src/main.rs
 ./main assets/img/rainbow.ipg
 ```
+
+# TODO
+
+- https://stackoverflow.com/questions/57073697/how-to-convert-a-picture-in-pure-black-and-white-in-rust
