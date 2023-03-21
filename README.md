@@ -2,22 +2,32 @@
 
 ## Cargo
 
+Install libraries
+
 ```bash
 cargo add time
 cargo add image
 
 cargo install
+```
 
+Compile program
+
+```bash
 cargo build
 ./target/debug/run assets/img/rainbow.jpg
 
 cargo build --release
 ./target/release/run assets/img/rainbow.jpg
+```
 
+Run program
+
+```bash
 cargo run assets/img/rainbow.jpg
 ```
 
-## Compilation
+## Manual compilation
 
 ```bash
 rustc src/main.rs
