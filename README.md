@@ -32,3 +32,7 @@ cargo run assets/img/rainbow.jpg
 rustc src/main.rs
 ./main assets/img/rainbow.ipg
 ```
+
+# TODO
+
+https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_wasm
