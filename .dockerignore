@@ -2,3 +2,4 @@
 *.md
 devops/
 target/
+tmp/

@@ -8,6 +8,7 @@ Install libraries
 
 ```bash
 cargo add image
+cargo install wasm-pack
 
 cargo install
 ```
@@ -16,16 +17,16 @@ Compile program
 
 ```bash
 cargo build
-./target/debug/run assets/img/rainbow.jpg
+./target/debug/instagrey assets/img/rainbow.jpg
 
 cargo build --release
-./target/release/run assets/img/rainbow.jpg
+./target/release/instagrey assets/img/rainbow.jpg
 ```
 
 Run program
 
 ```bash
-cargo run assets/img/rainbow.jpg
+cargo instagrey assets/img/rainbow.jpg
 ```
 
 ## Manual compilation
@@ -39,5 +40,9 @@ rustc src/main.rs
 
 ```bash
 docker build --tag app --file devops/docker/Dockerfile .
-docker run --volume $PWD/assets/img:/mnt/data app run /mnt/data/rainbow.jpg
+docker run \
+  --env OUTPUT_DIR=/tmp/app \
+  --volume $PWD/tmp:/tmp/app \
+  --volume $PWD/assets/img:/mnt/data \
+  app instagrey /mnt/data/rainbow.jpg
 ```

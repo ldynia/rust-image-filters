@@ -1,3 +1,3 @@
-gray.*
 *.lock
+gray.*
 target/
