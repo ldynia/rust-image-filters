@@ -1,6 +1,8 @@
 # Install
 
-## Cargo
+## Rust
+
+### Cargo
 
 Install libraries
 
@@ -31,4 +33,11 @@ cargo run assets/img/rainbow.jpg
 ```bash
 rustc src/main.rs
 ./main assets/img/rainbow.ipg
+```
+
+## Docker
+
+```bash
+docker build --tag app --file devops/docker/Dockerfile .
+docker run --volume $PWD/assets/img:/mnt/data app run /mnt/data/rainbow.jpg
 ```

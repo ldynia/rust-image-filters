@@ -1,0 +1,4 @@
+﻿*.lock
+*.md
+devops/
+target/
