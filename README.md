@@ -8,6 +8,7 @@ Install libraries
 
 ```bash
 cargo add image
+cargo install wasm-pack
 
 cargo install
 ```
