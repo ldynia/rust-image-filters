@@ -1,20 +1,23 @@
 ﻿# ---------BUILD-STAGE--------- #
 FROM rust:1.67 as BUILDER
 
-ARG WORKDIR=/usr/src
+ARG LINUX_DISTRO=x86_64-unknown-linux-musl \
+    WORKDIR=/usr/src
 
 WORKDIR $WORKDIR
 
 COPY . $WORKDIR
 
-RUN cargo build --release
+# Compile for alpine
+RUN rustup target add $LINUX_DISTRO
+RUN cargo build --release --target $LINUX_DISTRO
 
 # ---------PACKAGE-STAGE--------- #
-FROM debian:bullseye-slim
+FROM alpine:latest
 
-ARG BIN_PATH=/usr/src/target/release/instagrey \
-  INPUT_DIR=/mnt/data \
-  OUTPUT_DIR=/tmp/app
+ARG BIN_PATH=/usr/src/target/x86_64-unknown-linux-musl/release/instagrey \
+    INPUT_DIR=/mnt/data \
+    OUTPUT_DIR=/tmp/instagrey
 
 RUN mkdir -p $INPUT_DIR $OUTPUT_DIR
 
