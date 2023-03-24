@@ -42,7 +42,7 @@ rustc src/main.rs
 docker build --tag app --file devops/docker/Dockerfile .
 docker run \
   --env OUTPUT_DIR=/tmp/instagrey \
-  --volume $PWD/tmp:/tmp/insgit tagrey \
   --volume $PWD/assets/img:/mnt/data \
+  --volume $PWD/tmp:/tmp/instagrey \
   app instagrey /mnt/data/rainbow.jpg
 ```
