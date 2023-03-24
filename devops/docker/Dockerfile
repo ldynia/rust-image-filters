@@ -1,6 +1,7 @@
 ﻿# ---------BUILD-STAGE--------- #
 FROM rust:1.67 as BUILDER
 
+# For debian use x86_64-unknown-linux-gnu
 ARG LINUX_DISTRO=x86_64-unknown-linux-musl \
     WORKDIR=/usr/src
 

@@ -1,4 +1,13 @@
-# Install
+# Requirements
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl https://wasmtime.dev/install.sh -sSf | bash
+
+rustup target add wasm32-wasi
+rustup target add wasm32-unknown-unknown
+rustup target add x86_64-unknown-linux-musl
+```
 
 ## Rust
 

@@ -7,6 +7,13 @@ use std::path::PathBuf;
 fn main() {
   let args: Vec<String> = env::args().collect();
 
+  // Check existence of input arguments
+  let program = args[0].clone();
+  if args.len() < 2 {
+    println!("USAGE: {program} <IMAGE - required> <OUTPUT_DIR - optional>");
+    return;
+  }
+
   if let Some(file) = args.get(1) {
     let in_file = PathBuf::from(file);
     let in_file_name = in_file.file_name().unwrap().to_string_lossy();
