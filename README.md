@@ -59,3 +59,4 @@ docker run \
 # TODO
 
 https://donatstudios.com/Read-User-Files-With-Go-WASM
+https://stackoverflow.com/questions/51047146/how-to-read-a-file-with-javascript-to-webassembly
