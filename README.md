@@ -44,9 +44,6 @@ cargo instagrey assets/img/rainbow.jpg
 rustc src/main.rs
 ./main assets/img/rainbow.ipg
 ```
- TODO
- 
- https://donatstudios.com/Read-User-Files-With-Go-WASM
 
 ## Docker
 
@@ -58,3 +55,7 @@ docker run \
   --volume $PWD/tmp:/tmp/instagrey \
   app instagrey /mnt/data/rainbow.jpg
 ```
+
+# TODO
+
+https://donatstudios.com/Read-User-Files-With-Go-WASM
